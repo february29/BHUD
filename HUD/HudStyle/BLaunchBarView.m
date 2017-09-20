@@ -8,7 +8,9 @@
 
 #import "BLaunchBarView.h"
 
-#define b_Bar_Launch_Duration 0.5f
+#define b_Bar_Count 8
+#define b_Bar_Launch_Duration 1.0f
+#define b_Bar_Launch_Delay 0.1f
 
 @interface BLaunchBarView(){
     
@@ -39,14 +41,16 @@
     return self;
 }
 
+
+
 - (void)initBars {
     
     self.layers = [NSMutableDictionary dictionary];
    
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < b_Bar_Count; i++) {
         NSString *shapeLayerName = [NSString stringWithFormat:@"rectangle%d",i+1];
         CAShapeLayer *rectangle = [CAShapeLayer layer];
-        rectangle.frame = CGRectMake(99.5, 99.5, 1, 1);
+        rectangle.frame = CGRectMake(25, 25, 1, 1);
         rectangle.path = self.bezierPath.CGPath;
         rectangle.fillColor = [UIColor colorWithRed:0.875 green: 0.227 blue:0.118 alpha:1].CGColor;
         rectangle.lineWidth = 0;
@@ -55,11 +59,11 @@
         self.layers[shapeLayerName] = rectangle;
     }
     
-    CAShapeLayer * oval = [CAShapeLayer layer];
-    oval.frame = CGRectMake(0, 0, 2, 2);
-    oval.position = CGPointMake(self.center.x, self.center.y);
-    oval.backgroundColor = [UIColor colorWithRed:168/255.f green:169/255.f blue:38/255.f alpha:1.0].CGColor;
-    [self.layer addSublayer:oval];
+//    CAShapeLayer * oval = [CAShapeLayer layer];
+//    oval.frame = CGRectMake(0, 0, 2, 2);
+//    oval.position = CGPointMake(self.center.x, self.center.y);
+//    oval.backgroundColor = [UIColor colorWithRed:0.875 green: 0.227 blue:0.118 alpha:1].CGColor;
+//    [self.layer addSublayer:oval];
 }
 
 
@@ -80,95 +84,22 @@
 {
     CABasicAnimation *animation = [CABasicAnimation animation];
     animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-    animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-45*index * M_PI/180, 0, 0, -1)];;
-    animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(45*index * M_PI/180, 0, -0, 1))];
+    animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-360/b_Bar_Count*index * M_PI/180, 0, 0, -1)];
+    animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(10, 10, 10), CATransform3DMakeTranslation(0, -20, 0)), CATransform3DMakeRotation(360/b_Bar_Count*index * M_PI/180, 0, -0, 1))];
     animation.duration       = b_Bar_Launch_Duration;
-    animation.beginTime      = b_Bar_Launch_Duration/2*index;
-//    animation.autoreverses   = YES;
-//    animation.repeatCount = HUGE_VALF;
+    animation.beginTime      = CACurrentMediaTime()+b_Bar_Launch_Delay*index;
+//    if (index == 0) {
+//        animation.beginTime      = CACurrentMediaTime()+b_Bar_Launch_Delay*index;
+//    }else{
+//        animation.beginTime      = CACurrentMediaTime()+b_Bar_Launch_Delay*index;
+//    }
+    
+    animation.autoreverses   = YES;
+    animation.repeatCount = HUGE_VALF;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
 
-    
-    return animation;
-    switch (index) {
-        case 0:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DIdentity];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = CACurrentMediaTime();
-            animation.autoreverses   = YES;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            break;
-        case 1:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-45 * M_PI/180, 0, 0, -1)];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(45 * M_PI/180, 0, -0, 1))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = b_Bar_Launch_Duration/2*index;
-            animation.autoreverses   = YES;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            break;
-        case 2:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-90 * M_PI/180, 0, 0, -1)];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(90 * M_PI/180, 0, -0, 1))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = b_Bar_Launch_Duration/2*index;
-            animation.autoreverses   = YES;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            break;
-        case 3:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(225 * M_PI/180, 0, 0, -1)];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(-225 * M_PI/180, -0, 0, 1))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = b_Bar_Launch_Duration/2*index;
-            animation.autoreverses   = YES;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            break;
-        case 4:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, -1)];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(-M_PI, 0, 0, 1))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = b_Bar_Launch_Duration/2*index;
-            animation.autoreverses   = YES;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            break;
-        case 5:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(135 * M_PI/180, 0, 0, -1)];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(-135 * M_PI/180, -0, 0, 1))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = b_Bar_Launch_Duration/2*index;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            animation.autoreverses   = YES;
-            break;
-        case 6:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2, 0, 0, -1)];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(-M_PI_2, 0, 0, 1))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = b_Bar_Launch_Duration/2*index;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            animation.autoreverses   = YES;
-            break;
-        case 7:
-            animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-            animation.fromValue      = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_4, 0, 0, -1)];;
-            animation.toValue        = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DConcat(CATransform3DMakeScale(30, 30, 30), CATransform3DMakeTranslation(0, -60, 0)), CATransform3DMakeRotation(-M_PI_4, 0, 0, 1))];;
-            animation.duration       = b_Bar_Launch_Duration;
-            animation.beginTime      = b_Bar_Launch_Duration/2*index;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-            animation.autoreverses   = YES;
-            break;
-        default:
-            break;
-    }
-    
     return animation;
 }
 
@@ -176,7 +107,7 @@
 -(void)setHidden:(BOOL)hidden{
     [super setHidden:hidden];
     if (!hidden) {
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < b_Bar_Count; i++) {
             CABasicAnimation *transformAnimation = [self eachPartAnimation:i];
             NSString *layerNameStr = [NSString stringWithFormat:@"rectangle%d",i+1];
             
@@ -184,7 +115,10 @@
             
             [self.layers[layerNameStr] addAnimation:transformAnimation forKey:nil];
             
-            [self performSelector:@selector(resumeLayer:) withObject:self.layers[layerNameStr] afterDelay:(i)*b_Bar_Launch_Duration];
+//            [self performSelector:@selector(pauseLayer:) withObject:self.layers[layerNameStr] afterDelay:1];
+//            [self performSelector:@selector(resumeLayer:) withObject:self.layers[layerNameStr] afterDelay:b_Bar_Launch_Delay*8];
+
+//            [self performSelector:@selector(resumeLayer:) withObject:self.layers[layerNameStr] afterDelay:(i)*b_Bar_Launch_Duration];
 //            if (i == 0) {
 //                [self.layers[layerNameStr] addAnimation:transformAnimation forKey:nil];
 //                [self performSelector:@selector(pauseLayer:) withObject:self.layers[layerNameStr] afterDelay:1];
@@ -225,15 +159,15 @@
 //}
 //
 ////重新启动动画
--(void)resumeLayer:(CALayer*)layer
-{
-    
-    CFTimeInterval pausedTime = [layer timeOffset];
-    layer.speed = 1.0;
-    layer.timeOffset = 0.0;
-    layer.beginTime = 0.0;
-    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
-    layer.beginTime = timeSincePause;
-}
+//-(void)resumeLayer:(CALayer*)layer
+//{
+//    
+//    CFTimeInterval pausedTime = [layer timeOffset];
+//    layer.speed = 1.0;
+//    layer.timeOffset = 0.0;
+//    layer.beginTime = 0.0;
+//    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+//    layer.beginTime = timeSincePause;
+//}
 
 @end

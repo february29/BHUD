@@ -25,25 +25,40 @@
 
 +(void)showHudInView:(UIView *_Nullable)supperView{
     
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
+    [self showHudInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView];
     
+}
+
+
+
++(void)showIndicatorInView:(UIView *_Nullable)supperView{
+    
+    [self showIndicatorInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView];
+}
+
+
++(void)showHudInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
+//    BHudContentView *contentView = [[BHudContentView alloc]initWithIndicatorViewStyle:indicatorViewStyle];
+//    contentView.frame = supperView.bounds;
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
+    contentView.indicatorViewStyle = indicatorViewStyle;
     contentView.hudType = BLoadingAndIndicatorHud;
-    
-    
     
     [supperView addSubview:contentView];
     
 }
 
-+(void)showIndicatorInView:(UIView *_Nullable)supperView{
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
-    
++(void)showIndicatorInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
+  
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
+    contentView.indicatorViewStyle = indicatorViewStyle;
     contentView.hudType = BIndicatorHud;
     
     
     [supperView addSubview:contentView];
-    
 }
+
+
 
 +(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(LuosFailBtnClickBlock _Nullable )clickBlock{
     
@@ -57,8 +72,11 @@
     
     
     [supperView addSubview:contentView];
-    
+
 }
+
+
+
 
 +(void)hideHudInView:(UIView *_Nullable)supperView{
     

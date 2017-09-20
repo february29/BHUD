@@ -14,12 +14,42 @@ typedef  NS_ENUM(NSInteger,BHudContentViewType){
     BErrorHud,
 };
 
+typedef  NS_ENUM(NSInteger,BHudIndicatorViewStyle){
+    BHudCircleLoadingIndicatorView,
+    BHudJumpBarIndicatorView,
+    BHudLaunchBarIndicatorView,
+};
+
+
+
 typedef void(^BContentViewFailBtnClickBlock)();
 
 @interface BHudContentView : UIView
 
 
 
+
+
+
+/**
+ hud类型 ：
+ BLoadingAndIndicatorHud： 显示底部label和indicator
+ BIndicatorHud： 只显示indicator
+ BErrorHud：显示网络错误 和重新加载按钮
+ */
+@property (nonatomic,assign) BHudContentViewType hudType;
+
+
+/**
+ 设置indicatorView的样式，
+ */
+@property (nonatomic,assign) BHudIndicatorViewStyle indicatorViewStyle;
+
+
+//- (instancetype _Nonnull )initWithIndicatorViewStyle:(BHudIndicatorViewStyle) indicatorViewStyle;
+
+
+//======================================私有变量尽量不要修改========================================//
 //加载
 @property (nonatomic, strong) UILabel  * _Nullable label;
 
@@ -31,10 +61,5 @@ typedef void(^BContentViewFailBtnClickBlock)();
 @property (nonatomic, strong) UIButton  * _Nullable faildBtn;
 
 @property (nonatomic,copy)  BContentViewFailBtnClickBlock _Nullable faildBtnBlock;
-
-
-
-@property (nonatomic,assign) BHudContentViewType hudType;
-
 
 @end

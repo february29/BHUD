@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2107EFC71F721BE100275076 /* BCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2107EFC61F721BE100275076 /* BCircleLoadingView.m */; };
 		210B54D61F70B27D005547B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54D51F70B27D005547B9 /* main.m */; };
 		210B54D91F70B27D005547B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54D81F70B27D005547B9 /* AppDelegate.m */; };
 		210B54DC1F70B27D005547B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54DB1F70B27D005547B9 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2107EFC51F721BE100275076 /* BCircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCircleLoadingView.h; sourceTree = "<group>"; };
+		2107EFC61F721BE100275076 /* BCircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCircleLoadingView.m; sourceTree = "<group>"; };
 		210B54D11F70B27D005547B9 /* BHudDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHudDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		210B54D51F70B27D005547B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		210B54D71F70B27D005547B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		210B54F71F70E643005547B9 /* HudStyle */ = {
 			isa = PBXGroup;
 			children = (
+				2107EFC51F721BE100275076 /* BCircleLoadingView.h */,
+				2107EFC61F721BE100275076 /* BCircleLoadingView.m */,
 				210B54FB1F70E6A3005547B9 /* BJumpingBarView.h */,
 				210B54FC1F70E6A3005547B9 /* BJumpingBarView.m */,
 				21CDE10B1F70FAF700B3F5D5 /* BLaunchBarView.h */,
@@ -211,6 +216,7 @@
 				21CDE10D1F70FAF700B3F5D5 /* BLaunchBarView.m in Sources */,
 				210B54D91F70B27D005547B9 /* AppDelegate.m in Sources */,
 				210B54D61F70B27D005547B9 /* main.m in Sources */,
+				2107EFC71F721BE100275076 /* BCircleLoadingView.m in Sources */,
 				210B54F61F70B29D005547B9 /* UIView+BAGlowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

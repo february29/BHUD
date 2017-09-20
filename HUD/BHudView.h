@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BHudContentView.h"
 
 #define LuosAnimationTime 0.25f
 
@@ -22,6 +22,12 @@ typedef void(^LuosFailBtnClickBlock)();
 +(void)showHudInView:(UIView *_Nullable)supperView;
 
 +(void)showIndicatorInView:(UIView *_Nullable)supperView;
+
+
++(void)showHudInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle;
+
++(void)showIndicatorInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle;
+
 
 +(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(LuosFailBtnClickBlock _Nullable )clickBlock;
 
