@@ -67,11 +67,15 @@
     BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
     [contentView setBackgroundColor:[UIColor whiteColor]];
     contentView.hudType = BErrorHud;
-    
+    contentView.alpha = 0;
     contentView.faildBtnBlock = clickBlock;
     
     
     [supperView addSubview:contentView];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        contentView.alpha = 1;
+    }];
 
 }
 

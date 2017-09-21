@@ -12,12 +12,17 @@
 #define b_jumbView_Height 50.0f
 
 
-#define b_jumbView_Bar_Width 16.67f
+#define b_jumbView_Bar_Width 10.0f
 #define b_jumbView_Bar_Height 50.0f
 
 #define bBarColor1 [UIColor colorWithRed: 218/255.0 green: 131/255.0 blue: 57/255.0 alpha: 1]
 #define bBarColor2 [UIColor colorWithRed: 0.114 green: 0.41 blue: 1 alpha: 1]
 #define bBarColor3 [UIColor colorWithRed: 0.333 green: 0.33 blue: 0.7 alpha: 1]
+
+//#define bBarColor1 [UIColor redColor]
+//#define bBarColor2 [UIColor yellowColor]
+//#define bBarColor3 [UIColor blueColor]
+
 
 
 @interface BJumpingBarView(){
@@ -55,6 +60,10 @@
         
         [self initBezierPath];
         
+        
+        
+        
+        
         [self initBars];
         
         [self initAnimation];
@@ -73,45 +82,71 @@
 }
 -(void) initBars
 {
-    for (NSInteger i = 0; i < 3 ; i++)
-    {
-        CGPoint origin = CGPointMake(b_jumbView_Bar_Width * i, 0);
-        if (i == 0)
-        {
-            _firstBar = [CAShapeLayer layer];
-            _firstBar.frame = CGRectMake(origin.x, origin.y, b_jumbView_Bar_Width, b_jumbView_Bar_Width);
-            _firstBar.path = _originalBezierPath.CGPath;
-            _firstBar.fillColor = bBarColor1.CGColor;
-            
-            
-            [_containerLayer addSublayer:_firstBar];
-        }
-        if (i == 1)
-        {
-            _secondBar = [CAShapeLayer layer];
-            _secondBar.frame = CGRectMake(origin.x, origin.y, b_jumbView_Bar_Width, b_jumbView_Bar_Height);
-            _secondBar.fillColor = bBarColor2.CGColor;
-            _secondBar.path = _originalBezierPath.CGPath;
-            
-            [_containerLayer addSublayer:_secondBar];
-        }
-        if (i == 2)
-        {
-            _thirdBar = [CAShapeLayer layer];
-            _thirdBar.frame = CGRectMake(origin.x, origin.y, b_jumbView_Bar_Width, b_jumbView_Bar_Height);
-            _thirdBar.fillColor = bBarColor3.CGColor;
-            _thirdBar.path = _originalBezierPath.CGPath;
-            
-            [_containerLayer addSublayer:_thirdBar];
-        }
-    }
+    
+    _firstBar = [CAShapeLayer layer];
+    _firstBar.frame = CGRectMake(5, 0, b_jumbView_Bar_Width, b_jumbView_Bar_Width);
+    _firstBar.path = _originalBezierPath.CGPath;
+    _firstBar.fillColor = bBarColor1.CGColor;
+    [_containerLayer addSublayer:_firstBar];
+    
+    
+    _secondBar = [CAShapeLayer layer];
+    _secondBar.frame = CGRectMake(20, 0, b_jumbView_Bar_Width, b_jumbView_Bar_Height);
+    _secondBar.fillColor = bBarColor2.CGColor;
+    _secondBar.path = _originalBezierPath.CGPath;
+    [_containerLayer addSublayer:_secondBar];
+
+    
+    _thirdBar = [CAShapeLayer layer];
+    _thirdBar.frame = CGRectMake(35, 0, b_jumbView_Bar_Width, b_jumbView_Bar_Height);
+    _thirdBar.fillColor = bBarColor3.CGColor;
+    _thirdBar.path = _originalBezierPath.CGPath;
+    [_containerLayer addSublayer:_thirdBar];
+
+
+    
+//    for (NSInteger i = 0; i < 3 ; i++)
+//    {
+//        CGPoint origin = CGPointMake(b_jumbView_Bar_Width * i, 0);
+//        if (i == 0)
+//        {
+//            _firstBar = [CAShapeLayer layer];
+//            _firstBar.frame = CGRectMake(origin.x, origin.y, b_jumbView_Bar_Width, b_jumbView_Bar_Width);
+//            _firstBar.path = _originalBezierPath.CGPath;
+//            _firstBar.fillColor = bBarColor1.CGColor;
+//            
+//            
+//            [_containerLayer addSublayer:_firstBar];
+//        }
+//        if (i == 1)
+//        {
+//            _secondBar = [CAShapeLayer layer];
+//            _secondBar.frame = CGRectMake(origin.x, origin.y, b_jumbView_Bar_Width, b_jumbView_Bar_Height);
+//            _secondBar.fillColor = bBarColor2.CGColor;
+//            _secondBar.path = _originalBezierPath.CGPath;
+//            
+//            [_containerLayer addSublayer:_secondBar];
+//        }
+//        if (i == 2)
+//        {
+//            _thirdBar = [CAShapeLayer layer];
+//            _thirdBar.frame = CGRectMake(origin.x, origin.y, b_jumbView_Bar_Width, b_jumbView_Bar_Height);
+//            _thirdBar.fillColor = bBarColor3.CGColor;
+//            _thirdBar.path = _originalBezierPath.CGPath;
+//            
+//            [_containerLayer addSublayer:_thirdBar];
+//        }
+//    }
 }
 -(void) initBezierPath
 {
     // Original Path
     _originalBezierPath = [UIBezierPath bezierPath];
     [_originalBezierPath moveToPoint:CGPointMake(0, b_jumbView_Bar_Height)];
-    [_originalBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width / 2.0f, b_jumbView_Bar_Height - 2.0f)];
+    [_originalBezierPath addLineToPoint:CGPointMake(0, b_jumbView_Bar_Height - 2.0f)];
+    [_originalBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width, b_jumbView_Bar_Height - 2.0f)];
+    
+//    [_originalBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width / 2.0f, b_jumbView_Bar_Height - 2.0f)];
     [_originalBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width, b_jumbView_Bar_Height)];
     [_originalBezierPath addLineToPoint:CGPointMake(0, b_jumbView_Bar_Height)];
     [_originalBezierPath closePath];
@@ -119,7 +154,9 @@
     // end Path
     _endBezierPath = [UIBezierPath bezierPath];
     [_endBezierPath moveToPoint:CGPointMake(0, b_jumbView_Bar_Height)];
-    [_endBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width / 2.0f, 0)];
+    [_endBezierPath addLineToPoint:CGPointMake(0, b_jumbView_Bar_Height*0.3)];
+    [_endBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width , b_jumbView_Bar_Height*0.3)];
+//    [_endBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width / 2.0f, 0)];
     [_endBezierPath addLineToPoint:CGPointMake(b_jumbView_Bar_Width, b_jumbView_Bar_Height)];
     [_endBezierPath addLineToPoint:CGPointMake(0, b_jumbView_Bar_Height)];
     [_endBezierPath closePath];

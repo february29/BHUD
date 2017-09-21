@@ -12,6 +12,7 @@
 #import "BJumpingBarView.h"
 #import "BLaunchBarView.h"
 #import "BCircleLoadingView.h"
+#import "BFchView.h"
 
 
 @interface BHudContentView(){

@@ -44,10 +44,10 @@
         
         CGFloat angle = 2 * M_PI / BDotCount;
         self.replicatorLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1);
-        self.replicatorLayer.instanceDelay = 1.0 / BDotCount;
+        self.replicatorLayer.instanceDelay = 0.8 / BDotCount;
         
         self.basicAnimation.keyPath = @"transform.scale";
-        self.basicAnimation.duration = 1;
+        self.basicAnimation.duration = 0.8;
         self.basicAnimation.fromValue = @1;
         self.basicAnimation.toValue = @0.1;
         

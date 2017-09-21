@@ -33,7 +33,7 @@ typedef void(^BContentViewFailBtnClickBlock)();
 
 /**
  hud类型 ：
- BLoadingAndIndicatorHud： 显示底部label和indicator
+ BLoadingAndIndicatorHud： 显示底部label和indicator 由hudview不同函数调用决定用户不要修改
  BIndicatorHud： 只显示indicator
  BErrorHud：显示网络错误 和重新加载按钮
  */
@@ -51,14 +51,14 @@ typedef void(^BContentViewFailBtnClickBlock)();
 
 //======================================私有变量尽量不要修改========================================//
 //加载
-@property (nonatomic, strong) UILabel  * _Nullable label;
+@property (nonatomic, strong,readonly) UILabel  * _Nullable label;
 
-@property (nonatomic, strong) UIView  * _Nullable indicatorView;
+@property (nonatomic, strong,readonly) UIView  * _Nullable indicatorView;
 
 // 失败
-@property (nonatomic,strong) UIImageView * _Nullable faildImageView;
+@property (nonatomic,strong,readonly) UIImageView * _Nullable faildImageView;
 
-@property (nonatomic, strong) UIButton  * _Nullable faildBtn;
+@property (nonatomic, strong,readonly) UIButton  * _Nullable faildBtn;
 
 @property (nonatomic,copy)  BContentViewFailBtnClickBlock _Nullable faildBtnBlock;
 
