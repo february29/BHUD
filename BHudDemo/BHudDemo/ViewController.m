@@ -83,7 +83,7 @@
 
         case 3:
         {
-            [BHudView showHudInView:self.view];
+            [BHudView showHudInView:self.view indicatorViewStyle:BHudFchIndicatorView];
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 //耗时任务
                 

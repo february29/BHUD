@@ -26,6 +26,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+//        [self setBackgroundColor:[UIColor greenColor]];
         [self initLayer];
         [self initAnimation];
         

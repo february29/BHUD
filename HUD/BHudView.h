@@ -19,6 +19,10 @@ typedef void(^LuosFailBtnClickBlock)();
 
 
 
+
+
+
+
 +(void)showHudInView:(UIView *_Nullable)supperView;
 
 +(void)showIndicatorInView:(UIView *_Nullable)supperView;
@@ -32,6 +36,9 @@ typedef void(^LuosFailBtnClickBlock)();
 +(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(LuosFailBtnClickBlock _Nullable )clickBlock;
 
 +(void)hideHudInView:(UIView *_Nullable)supperView;
+
+
+
 
 
 @end

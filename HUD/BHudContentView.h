@@ -18,6 +18,8 @@ typedef  NS_ENUM(NSInteger,BHudIndicatorViewStyle){
     BHudCircleLoadingIndicatorView,
     BHudJumpBarIndicatorView,
     BHudLaunchBarIndicatorView,
+    BHudFchIndicatorView,
+    
 };
 
 
@@ -50,6 +52,8 @@ typedef void(^BContentViewFailBtnClickBlock)();
 
 
 //======================================私有变量尽量不要修改========================================//
+
+@property (nonatomic,strong) UIView *smailContentView;
 //加载
 @property (nonatomic, strong,readonly) UILabel  * _Nullable label;
 

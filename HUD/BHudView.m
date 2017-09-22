@@ -12,11 +12,15 @@
 #import "BHudContentView.h"
 @interface BHudView(){
 
+    
 }
 @end
 
 
 @implementation BHudView
+
+
+
 
 
 
@@ -38,8 +42,7 @@
 
 
 +(void)showHudInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
-//    BHudContentView *contentView = [[BHudContentView alloc]initWithIndicatorViewStyle:indicatorViewStyle];
-//    contentView.frame = supperView.bounds;
+
     BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
     contentView.indicatorViewStyle = indicatorViewStyle;
     contentView.hudType = BLoadingAndIndicatorHud;
@@ -52,6 +55,7 @@
   
     BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
     contentView.indicatorViewStyle = indicatorViewStyle;
+    
     contentView.hudType = BIndicatorHud;
     
     
