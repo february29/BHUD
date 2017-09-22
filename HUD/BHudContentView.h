@@ -19,6 +19,7 @@ typedef  NS_ENUM(NSInteger,BHudIndicatorViewStyle){
     BHudJumpBarIndicatorView,
     BHudLaunchBarIndicatorView,
     BHudFchIndicatorView,
+    BHudCustomView,
     
 };
 
@@ -36,7 +37,7 @@ typedef void(^BContentViewFailBtnClickBlock)();
 /**
  hud类型 ：
  BLoadingAndIndicatorHud： 显示底部label和indicator 由hudview不同函数调用决定用户不要修改
- BIndicatorHud： 只显示indicator
+ BIndicatorHud： 只显示indicator 自定义模式也使用该type
  BErrorHud：显示网络错误 和重新加载按钮
  */
 @property (nonatomic,assign) BHudContentViewType hudType;
@@ -46,6 +47,12 @@ typedef void(^BContentViewFailBtnClickBlock)();
  设置indicatorView的样式，
  */
 @property (nonatomic,assign) BHudIndicatorViewStyle indicatorViewStyle;
+
+
+/**
+ 自定义样式
+ */
+@property (nonatomic,strong) UIView * _Nonnull customView;
 
 
 //- (instancetype _Nonnull )initWithIndicatorViewStyle:(BHudIndicatorViewStyle) indicatorViewStyle;

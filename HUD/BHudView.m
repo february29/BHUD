@@ -55,7 +55,6 @@
   
     BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
     contentView.indicatorViewStyle = indicatorViewStyle;
-    
     contentView.hudType = BIndicatorHud;
     
     
@@ -94,6 +93,18 @@
             
         }
     }
+    
+}
+
++(void)showCustomHudView:(UIView *_Nullable)view InView:(UIView *_Nullable)supperView{
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
+    contentView.indicatorViewStyle = BHudCustomView;
+    contentView.customView = view;
+    contentView.hudType = BIndicatorHud;
+    
+    
+    [supperView addSubview:contentView];
+    
     
 }
 

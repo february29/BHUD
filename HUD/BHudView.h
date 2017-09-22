@@ -16,13 +16,6 @@ typedef void(^LuosFailBtnClickBlock)();
 @interface BHudView : NSObject
 
 
-
-
-
-
-
-
-
 +(void)showHudInView:(UIView *_Nullable)supperView;
 
 +(void)showIndicatorInView:(UIView *_Nullable)supperView;
@@ -38,6 +31,7 @@ typedef void(^LuosFailBtnClickBlock)();
 +(void)hideHudInView:(UIView *_Nullable)supperView;
 
 
++(void)showCustomHudView:(UIView *_Nullable)view InView:(UIView *_Nullable)supperView;
 
 
 
