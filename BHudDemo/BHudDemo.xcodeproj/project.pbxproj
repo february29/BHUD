@@ -81,7 +81,7 @@
 		210B54D31F70B27D005547B9 /* BHudDemo */ = {
 			isa = PBXGroup;
 			children = (
-				210B54EB1F70B29D005547B9 /* HUD */,
+				210B54EB1F70B29D005547B9 /* BHUD */,
 				210B54D71F70B27D005547B9 /* AppDelegate.h */,
 				210B54D81F70B27D005547B9 /* AppDelegate.m */,
 				210B54DA1F70B27D005547B9 /* ViewController.h */,
@@ -103,7 +103,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		210B54EB1F70B29D005547B9 /* HUD */ = {
+		210B54EB1F70B29D005547B9 /* BHUD */ = {
 			isa = PBXGroup;
 			children = (
 				210B54F71F70E643005547B9 /* HudIndicatorViewStyle */,
@@ -115,8 +115,8 @@
 				210B54F11F70B29D005547B9 /* UIView+BAGlowView.h */,
 				210B54F21F70B29D005547B9 /* UIView+BAGlowView.m */,
 			);
-			name = HUD;
-			path = ../../HUD;
+			name = BHUD;
+			path = ../../BHUD;
 			sourceTree = "<group>";
 		};
 		210B54F71F70E643005547B9 /* HudIndicatorViewStyle */ = {
