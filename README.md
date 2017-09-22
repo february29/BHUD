@@ -1,6 +1,22 @@
 # BHUD
 加载框显示工具
 
+
+
+<div align=center>
+ <img src="BHudDemo/bhud1.gif" width = "375" height = "689" alt="图片名称" align=center />
+ 
+<img src="BHudDemo/bhud2.gif" width = "375" height = "689" alt="图片名称" align=center />
+
+ <img src="BHudDemo/bhud3.gif" width = "375" height = "689" alt="图片名称" align=center />
+ 
+<img src="BHudDemo/bhud4.gif" width = "375" height = "689" alt="图片名称" align=center />
+</div>
+
+
+
+
+
 ## 集成说明
 ### pod
 ```
