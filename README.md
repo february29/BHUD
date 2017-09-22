@@ -13,15 +13,19 @@ pod 敬请期待
 ## 基本说明
 引入头文件
 ```
-
+#import "BHudView.h"
 ```
 ### 显示indicatorInView和lable
 ```
 [BHudView showHudInView:self.view];
+或者
+[BHudView showHudInView:self.view indicatorViewStyle:BHudJumpBarIndicatorView];
 ```
 ### 显示indicatorInView
 ```
 [BHudView showIndicatorInView:self.view];
+或者
+[BHudView showIndicatorInView:self.view indicatorViewStyle:BHudLaunchBarIndicatorView];
 ```
 ### 显示错误
 ```
@@ -32,9 +36,11 @@ pod 敬请期待
 ```
 
 ## 高级用法
+自定义用法
 ```
-//改变indicatorInView 样式 提供几个简单样式
-[BHudView showHudInView:self.view indicatorViewStyle:BHudFchIndicatorView];
+ UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(200, 200, 200, 200)];
+        [customView setBackgroundColor: [UIColor greenColor]];
+        [BHudView showCustomHudView:customView InView:self.view];
 
 ```
 
