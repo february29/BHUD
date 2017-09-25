@@ -8,11 +8,12 @@
 
 #import "BHudContentView.h"
 
-#import "UIView+BAGlowView.h"
+//#import "UIView+BAGlowView.h"
 #import "BJumpingBarView.h"
 #import "BLaunchBarView.h"
 #import "BCircleLoadingView.h"
 #import "BFchView.h"
+#import "UILabel+BAnimation.h"
 
 
 @interface BHudContentView(){
@@ -35,12 +36,8 @@
         _label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0,self.frame.size.width, 30)];
         _label.textAlignment = NSTextAlignmentCenter;
         _label.text = @"loading";
-        _label.GCDTimerInterval = @(0.8f);
-        _label.glowDuration     = @(0.7f);
-        _label.glowLayerOpacity = @(1.f);
-        [_label createGlowLayerWithColor:[UIColor blackColor]
-                              glowRadius:2.f];
-        [_label startGlow];
+//        [_label addStrokeEndAnimation];
+        [_label addOpacityAnimation];
         [self addSubview:_label];
         
         

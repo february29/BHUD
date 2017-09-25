@@ -16,10 +16,10 @@
 		210B54E41F70B27D005547B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210B54E21F70B27D005547B9 /* LaunchScreen.storyboard */; };
 		210B54F31F70B29D005547B9 /* BHudContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54ED1F70B29D005547B9 /* BHudContentView.m */; };
 		210B54F41F70B29D005547B9 /* BHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54EF1F70B29D005547B9 /* BHudView.m */; };
-		210B54F61F70B29D005547B9 /* UIView+BAGlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54F21F70B29D005547B9 /* UIView+BAGlowView.m */; };
 		210B54FA1F70E643005547B9 /* img_network_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 210B54F91F70E643005547B9 /* img_network_error.png */; };
 		210B54FD1F70E6A3005547B9 /* BJumpingBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54FC1F70E6A3005547B9 /* BJumpingBarView.m */; };
 		211008871F7358A8003F6990 /* BFchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 211008861F7358A8003F6990 /* BFchView.m */; };
+		21C0373B1F789E3B00A975D8 /* UILabel+BAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C0373A1F789E3B00A975D8 /* UILabel+BAnimation.m */; };
 		21CDE10D1F70FAF700B3F5D5 /* BLaunchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CDE10C1F70FAF700B3F5D5 /* BLaunchBarView.m */; };
 /* End PBXBuildFile section */
 
@@ -40,13 +40,13 @@
 		210B54ED1F70B29D005547B9 /* BHudContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHudContentView.m; sourceTree = "<group>"; };
 		210B54EE1F70B29D005547B9 /* BHudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHudView.h; sourceTree = "<group>"; };
 		210B54EF1F70B29D005547B9 /* BHudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHudView.m; sourceTree = "<group>"; };
-		210B54F11F70B29D005547B9 /* UIView+BAGlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BAGlowView.h"; sourceTree = "<group>"; };
-		210B54F21F70B29D005547B9 /* UIView+BAGlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BAGlowView.m"; sourceTree = "<group>"; };
 		210B54F91F70E643005547B9 /* img_network_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_network_error.png; sourceTree = "<group>"; };
 		210B54FB1F70E6A3005547B9 /* BJumpingBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJumpingBarView.h; sourceTree = "<group>"; };
 		210B54FC1F70E6A3005547B9 /* BJumpingBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJumpingBarView.m; sourceTree = "<group>"; };
 		211008851F7358A8003F6990 /* BFchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFchView.h; sourceTree = "<group>"; };
 		211008861F7358A8003F6990 /* BFchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFchView.m; sourceTree = "<group>"; };
+		21C037391F789E3B00A975D8 /* UILabel+BAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+BAnimation.h"; sourceTree = "<group>"; };
+		21C0373A1F789E3B00A975D8 /* UILabel+BAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+BAnimation.m"; sourceTree = "<group>"; };
 		21CDE10B1F70FAF700B3F5D5 /* BLaunchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLaunchBarView.h; sourceTree = "<group>"; };
 		21CDE10C1F70FAF700B3F5D5 /* BLaunchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLaunchBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +112,8 @@
 				210B54ED1F70B29D005547B9 /* BHudContentView.m */,
 				210B54EE1F70B29D005547B9 /* BHudView.h */,
 				210B54EF1F70B29D005547B9 /* BHudView.m */,
-				210B54F11F70B29D005547B9 /* UIView+BAGlowView.h */,
-				210B54F21F70B29D005547B9 /* UIView+BAGlowView.m */,
+				21C037391F789E3B00A975D8 /* UILabel+BAnimation.h */,
+				21C0373A1F789E3B00A975D8 /* UILabel+BAnimation.m */,
 			);
 			name = BHUD;
 			path = ../../BHUD;
@@ -214,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C0373B1F789E3B00A975D8 /* UILabel+BAnimation.m in Sources */,
 				210B54FD1F70E6A3005547B9 /* BJumpingBarView.m in Sources */,
 				210B54DC1F70B27D005547B9 /* ViewController.m in Sources */,
 				210B54F41F70B29D005547B9 /* BHudView.m in Sources */,
@@ -223,7 +224,6 @@
 				210B54D91F70B27D005547B9 /* AppDelegate.m in Sources */,
 				210B54D61F70B27D005547B9 /* main.m in Sources */,
 				2107EFC71F721BE100275076 /* BCircleLoadingView.m in Sources */,
-				210B54F61F70B29D005547B9 /* UIView+BAGlowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
