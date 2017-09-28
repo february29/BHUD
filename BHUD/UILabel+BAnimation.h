@@ -15,4 +15,6 @@
 
 -(void)addOpacityAnimation;
 
+//-(void)addGradientAnimation;
+
 @end

@@ -37,6 +37,7 @@
         _label.textAlignment = NSTextAlignmentCenter;
         _label.text = @"loading";
 //        [_label addStrokeEndAnimation];
+//        [_label addOpacityAnimation];
         [_label addOpacityAnimation];
         [self addSubview:_label];
         

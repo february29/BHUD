@@ -89,7 +89,7 @@ static char b_layerkey;
  创建字体pathCAShapeLayer
 
  */
--(CAShapeLayer *)pathLayer{
+-(CAShapeLayer *)textPathLayer{
     CAShapeLayer *pathLayer;// = objc_getAssociatedObject(self, &b_layerkey);
     UIBezierPath *path  = [self textPath];
     pathLayer = [CAShapeLayer layer];
@@ -114,7 +114,7 @@ static char b_layerkey;
 
 -(void)addStrokeEndAnimation{
     
-    CAShapeLayer *layer = [self pathLayer];
+    CAShapeLayer *layer = [self textPathLayer];
     [self.layer addSublayer:layer];
     
     self.textColor = [UIColor clearColor];
@@ -171,7 +171,39 @@ static char b_layerkey;
 }
 
 
+//待完善
+-(void)addGradientAnimation{
+    CAGradientLayer *layer = [self gradientLayer];
+    [self.layer addSublayer:layer];
+    
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"locations"];
+    animation.duration = 3.0f;
+    animation.toValue = @[@(0.9), @(1.0), @(1.0)];
+    animation.removedOnCompletion = NO;
+    animation.repeatCount = HUGE_VALF;
+    animation.fillMode = kCAFillModeForwards;
+    [layer addAnimation:animation forKey:@"gradientAnimation"];
+//    self.layer.mask = layer;
 
+}
+
+
+-(CAGradientLayer *)gradientLayer{
+    
+    CAGradientLayer *graLayer = [CAGradientLayer layer];
+    graLayer.frame = self.bounds;
+    graLayer.colors = @[(__bridge id)[UIColor clearColor].CGColor,
+                        (__bridge id)self.textColor.CGColor,
+                        (__bridge id)[UIColor clearColor].CGColor];
+    
+    graLayer.startPoint = CGPointMake(0, 0);//设置渐变方向起点
+    graLayer.endPoint = CGPointMake(1, 0);  //设置渐变方向终点
+    graLayer.locations = @[@(0.0), @(0.0), @(0.1)]; //colors中各颜色对应的初始渐变点
+    
+    return graLayer;
+    
+}
 
 
 @end

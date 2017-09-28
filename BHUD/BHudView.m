@@ -7,7 +7,7 @@
 //
 
 #import "BHudView.h"
-#import "UIView+BAGlowView.h"
+
 
 #import "BHudContentView.h"
 @interface BHudView(){
