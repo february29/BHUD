@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dataArray = @[@"cirlcle",@"jumbingbar",@"luunchbar",@"fch",@"failth",@"custom"];
+    _dataArray = @[@"cirlcle",@"jumbingbar",@"luunchbar",@"fch",@"failth",@"custom",@"customColorCirlcle"];
     
     
     
@@ -149,7 +149,25 @@
         });
 
         
+    }else if(indexPath.row == 6){
+        
+        
+        [BHudView showCircleHudInView:self.view indicatorViewColor:[UIColor blackColor]];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //耗时任务
+            
+            [NSThread sleepForTimeInterval:5.0];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //更新UI
+                [BHudView hideHudInView:self.view];
+                
+            });
+        });
+        
+        
     }
+
 
 
 

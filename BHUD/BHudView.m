@@ -43,7 +43,7 @@
 
 +(void)showHudInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
 
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
     contentView.indicatorViewStyle = indicatorViewStyle;
     contentView.hudType = BLoadingAndIndicatorHud;
     
@@ -53,7 +53,7 @@
 
 +(void)showIndicatorInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
   
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
     contentView.indicatorViewStyle = indicatorViewStyle;
     contentView.hudType = BIndicatorHud;
     
@@ -96,8 +96,29 @@
     
 }
 
++(void)showCircleHudInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
+    contentView.indicatorViewStyle = BHudCircleLoadingIndicatorView;
+    contentView.circleIndicatorViewColor = indicatorViewColor;
+    contentView.hudType = BLoadingAndIndicatorHud;
+    
+    
+    [supperView addSubview:contentView];
+}
+
++(void)showCircleIndicatorInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
+    contentView.indicatorViewStyle = BHudCircleLoadingIndicatorView;
+    contentView.circleIndicatorViewColor = indicatorViewColor;
+    contentView.hudType = BIndicatorHud;
+    
+    
+    [supperView addSubview:contentView];
+}
+
+
 +(void)showCustomHudView:(UIView *_Nullable)view InView:(UIView *_Nullable)supperView{
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.frame];
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
     contentView.indicatorViewStyle = BHudCustomView;
     contentView.customView = view;
     contentView.hudType = BIndicatorHud;

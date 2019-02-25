@@ -50,6 +50,12 @@ typedef void(^BContentViewFailBtnClickBlock)();
 
 
 /**
+ 设置circleIndicatorViewColor的样式，
+ */
+@property (nonatomic,strong) UIColor * _Nullable circleIndicatorViewColor;
+
+
+/**
  自定义样式
  */
 @property (nonatomic,strong) UIView * _Nonnull customView;

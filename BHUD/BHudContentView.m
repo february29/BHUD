@@ -99,6 +99,11 @@
     
 }
 
+-(void)setCircleIndicatorViewColor:(UIColor *)circleIndicatorViewColor{
+    _circleIndicatorViewColor = circleIndicatorViewColor;
+    [self setIndicatorViewStyle:_indicatorViewStyle];
+}
+
 -(void)setIndicatorViewStyle:(BHudIndicatorViewStyle)indicatorViewStyle{
     
     
@@ -115,6 +120,9 @@
         case BHudCircleLoadingIndicatorView:
         {
             _indicatorView = [BCircleLoadingView new];
+            if (_circleIndicatorViewColor) {
+                ((BCircleLoadingView *)_indicatorView).bHUDForegroundColor = _circleIndicatorViewColor;
+            }
             [self addSubview:_indicatorView];
             break;
         }

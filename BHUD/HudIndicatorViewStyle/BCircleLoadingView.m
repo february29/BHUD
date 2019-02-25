@@ -8,9 +8,9 @@
 
 #import "BCircleLoadingView.h"
 
-#define BDotW 8
-#define BDotCount 100
-#define BHUDForegroundColor [UIColor colorWithRed:60/255.0 green:139/255.0 blue:246/255.0 alpha:0.6]
+//#define BDotW 8
+//#define BDotCount 100
+//#define BHUDForegroundColor [UIColor colorWithRed:60/255.0 green:139/255.0 blue:246/255.0 alpha:0.6]
 
 
 @interface BCircleLoadingView(){
@@ -33,18 +33,21 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        float width = BDotW;
-        self.mylayer.backgroundColor = BHUDForegroundColor.CGColor;
+        _bHUDForegroundColor = [UIColor colorWithRed:60/255.0 green:139/255.0 blue:246/255.0 alpha:0.6];
+        _bDotW = 8;
+        _bDotCount = 100;
+        float width = _bDotW;
+        self.mylayer.backgroundColor = _bHUDForegroundColor.CGColor;
         self.mylayer.frame = CGRectMake(0, 0, width, width);
         self.mylayer.cornerRadius = width / 2;
 //        self.mylayer.anchorPoint = CGPointMake(0.5, 0.5);
         self.mylayer.transform = CATransform3DMakeScale(0.01, 0.01, 0.01);
         
-        self.replicatorLayer.instanceCount = BDotCount;
+        self.replicatorLayer.instanceCount = _bDotCount;
         
-        CGFloat angle = 2 * M_PI / BDotCount;
+        CGFloat angle = 2 * M_PI / _bDotCount;
         self.replicatorLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1);
-        self.replicatorLayer.instanceDelay = 0.8 / BDotCount;
+        self.replicatorLayer.instanceDelay = 0.8 / _bDotCount;
         
         self.basicAnimation.keyPath = @"transform.scale";
         self.basicAnimation.duration = 0.8;
@@ -62,10 +65,14 @@
 
 -(void)layoutSubviews{
     
-    self.mylayer.frame = CGRectMake(BDotW, BDotW, BDotW, BDotW);
+    self.mylayer.frame = CGRectMake(_bDotW, _bDotW, _bDotW, _bDotW);
     self.replicatorLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 }
 
+-(void)setBHUDForegroundColor:(UIColor *)bHUDForegroundColor{
+    _bHUDForegroundColor = bHUDForegroundColor;
+     self.mylayer.backgroundColor = _bHUDForegroundColor.CGColor;
+}
 
 -(CAReplicatorLayer *)replicatorLayer
 {

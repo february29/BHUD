@@ -10,4 +10,8 @@
 
 @interface BCircleLoadingView : UIView
 
+@property (nonatomic,assign) int  bDotW ;
+@property (nonatomic,assign) int  bDotCount ;
+@property(nonatomic,strong)UIColor * bHUDForegroundColor;
+
 @end
