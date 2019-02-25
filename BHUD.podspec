@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = 'BHUD'
-    spec.version      = '1.0.0'
+    spec.version      = '1.0.1'
     spec.summary      = 'hud'
     spec.homepage     = 'https://github.com/february29/BHUD'
     spec.license      = 'MIT'
