@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = 'BHUD'
-    spec.version      = '1.0.1'
+    spec.version      = '1.0.2'
     spec.summary      = 'hud'
     spec.homepage     = 'https://github.com/february29/BHUD'
     spec.license      = 'MIT'
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.source       = {:git => 'https://github.com/february29/BHUD.git', :tag => spec.version}
 
     #spec.resource_bundles     = ['BHUD/images/*']
-    spec.resource_bundles = {'BHUDImages' => ['BHUD/images/*.png']}
+    spec.resource_bundles = {'BHUDImagesBundle' => ['BHUD/images/*.png']}
 
     spec.source_files = ['BHUD/*.{h,m}','BHUD/HudIndicatorViewStyle/*.{h,m}']
 
