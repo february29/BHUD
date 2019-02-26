@@ -8,7 +8,8 @@ Pod::Spec.new do |spec|
     spec.platform     = :ios, '7.0'
     spec.source       = {:git => 'https://github.com/february29/BHUD.git', :tag => spec.version}
 
-    spec.resource     = ['BHUD/images/*']
+    #spec.resource_bundles     = ['BHUD/images/*']
+    spec.resource_bundles = {'BHUDImages' => ['BHUD/images/*.png']}
 
     spec.source_files = ['BHUD/*.{h,m}','BHUD/HudIndicatorViewStyle/*.{h,m}']
 

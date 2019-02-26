@@ -6,9 +6,11 @@
 //  Copyright © 2017年 北京仙指信息技术有限公司. All rights reserved.
 //
 
-#import "BHudContentView.h"
+#define BHUDBundle [NSBundle bundleForClass:[self class]]
+#define BHUDImagesSrc [BHUDBundle.resourcePath stringByAppendingString:@"BHUDImagesBundle.bundle"]
+#define BHUDImagesBundle [NSBundle bundleWithPath:BHUDImagesSrc]
 
-//#import "UIView+BAGlowView.h"
+#import "BHudContentView.h"
 #import "BJumpingBarView.h"
 #import "BLaunchBarView.h"
 #import "BCircleLoadingView.h"
@@ -42,8 +44,11 @@
         [self addSubview:_label];
         
         
+        
         _faildImageView = [UIImageView new];
-        _faildImageView.image = [UIImage imageNamed:@"img_network_error"];
+        
+        
+        _faildImageView.image = [UIImage imageNamed:@"img_network_error" inBundle:BHUDImagesBundle compatibleWithTraitCollection:nil];
         [self addSubview:_faildImageView];
         
         
