@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001103210AD9FEB8F8BBEDD7732EC3FA /* BJumpingBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5858CBD82DE0A0188EEFD8D512E9C05B /* BJumpingBarView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		019069FACC213069755EB6EAAA394601 /* Pods-BHudDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AF9C6C4A0E71C658DCA0DBF5CBCC7A /* Pods-BHudDemo-dummy.m */; };
+		0515A7D31BB06E0FA17AEC83D1B1F6DD /* BHudContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 363EA0670F5E90162C35278DFB861DA5 /* BHudContentView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0CD4ACFCA158EF88B0E0CE2E07A29E55 /* UILabel+BAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AB435B41769DBC528C0E6B159A83CFB3 /* UILabel+BAnimation.m */; };
+		119897FB9295EF6BBC7AB8615934A528 /* BLaunchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 893B5D20FDAF4B7CF1197855BE1B9502 /* BLaunchBarView.m */; };
+		1696028B61091C7E7A66AC1ABAADC8F2 /* BHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = A93DC10BE116D1D3E197408B5635455B /* BHudView.m */; };
+		679BDC94B3548E62F968C9FD16F23B33 /* img_network_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 629037C81BAD894C494EBDA08FD7C959 /* img_network_error.png */; };
+		7441E12F46A4DC0EC6EF2E515F0610C0 /* BJumpingBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18319BDAE2EC6F302C086956AF721232 /* BJumpingBarView.m */; };
+		7DFFD5A0E65F92D1ED1217BD8B7F105A /* BHudContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE84EFAB570C9DF1F4FA8F6B1252753 /* BHudContentView.m */; };
+		842626C86444BE0CC487CD296B60CFD9 /* BFchView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF12B5AAC3C1A3ECD4EBCFC6E9C2E95 /* BFchView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8868D6252E66CDFE84B8B22E6393E870 /* BCircleLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = C6017918D730BB1821AC6C17D72CBC9B /* BCircleLoadingView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6F37E217D28F518ED0C4DB70D245399 /* BCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B07788B98422370EC72C6131E7C8576C /* BCircleLoadingView.m */; };
+		B2DC32E3407E722092711B7D0535E98D /* BHudView.h in Headers */ = {isa = PBXBuildFile; fileRef = A39BE4B95F6B93C17011E2DB3FF83F2C /* BHudView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B2F643DA07D4E101133B48D9A81579E7 /* UILabel+BAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E61A5CFD9E23226339B6A85AEE0809 /* UILabel+BAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DA1D626CC62EB09DE47D72842EB349A3 /* BLaunchBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3071D2A227A60056C5C1F31CFA8B8F96 /* BLaunchBarView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EB3F92B0A7D337F97AB688A078A60054 /* BHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB49AA3F40EDBCE269E90B4D4405F6 /* BHUD-dummy.m */; };
+		EF7115D86A30ACD428A4B86FEFBE022B /* BFchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1A1D512E265609CED4D91173A246F3 /* BFchView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9EC7A113B408A06EE4E8DAE82F9C5141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D27F21C57723D4F1751C5F66E72D1F21;
+			remoteInfo = "BHUD-BHUDImagesBundle";
+		};
+		FCBCEAAC108B0AEED213FD65CFCA05FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3654899049CC7D148DFAA3772FF39C4C;
+			remoteInfo = BHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03DB49AA3F40EDBCE269E90B4D4405F6 /* BHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BHUD-dummy.m"; sourceTree = "<group>"; };
+		18319BDAE2EC6F302C086956AF721232 /* BJumpingBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BJumpingBarView.m; sourceTree = "<group>"; };
+		2CD160C04DE72757FAF03BFCABAAD039 /* Pods-BHudDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BHudDemo-resources.sh"; sourceTree = "<group>"; };
+		2CFD9427B0642ECA8DDBFB144F424270 /* Pods-BHudDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BHudDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3071D2A227A60056C5C1F31CFA8B8F96 /* BLaunchBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BLaunchBarView.h; sourceTree = "<group>"; };
+		346CB9C6DA6F734A8163F20C8E0F1F36 /* BHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BHUD.xcconfig; sourceTree = "<group>"; };
+		363EA0670F5E90162C35278DFB861DA5 /* BHudContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BHudContentView.h; path = BHUD/BHudContentView.h; sourceTree = "<group>"; };
+		3AE84EFAB570C9DF1F4FA8F6B1252753 /* BHudContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BHudContentView.m; path = BHUD/BHudContentView.m; sourceTree = "<group>"; };
+		3BFEF8832F49D617079952CF6D588570 /* libBHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBHUD.a; path = libBHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D06D3A75EA3874FB8E057D51F60458 /* BHUD.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BHUD.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5858CBD82DE0A0188EEFD8D512E9C05B /* BJumpingBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BJumpingBarView.h; sourceTree = "<group>"; };
+		586F65749361B1C84650B08801BE34B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		629037C81BAD894C494EBDA08FD7C959 /* img_network_error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = img_network_error.png; path = BHUD/images/img_network_error.png; sourceTree = "<group>"; };
+		7400FC04BFED5FEAFE6338BE86554F79 /* libPods-BHudDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BHudDemo.a"; path = "libPods-BHudDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF12B5AAC3C1A3ECD4EBCFC6E9C2E95 /* BFchView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BFchView.h; sourceTree = "<group>"; };
+		800882C4C097996C7CB4C7A0336DF89A /* Pods-BHudDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BHudDemo.release.xcconfig"; sourceTree = "<group>"; };
+		893B5D20FDAF4B7CF1197855BE1B9502 /* BLaunchBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLaunchBarView.m; sourceTree = "<group>"; };
+		A27D358E673570D9854F99EDC4FCD05B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A27E0CB7CE47F2D8D0F943A51CD0218D /* BHUDImagesBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BHUDImagesBundle.bundle; path = "BHUD-BHUDImagesBundle.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A39BE4B95F6B93C17011E2DB3FF83F2C /* BHudView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BHudView.h; path = BHUD/BHudView.h; sourceTree = "<group>"; };
+		A93DC10BE116D1D3E197408B5635455B /* BHudView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BHudView.m; path = BHUD/BHudView.m; sourceTree = "<group>"; };
+		AB435B41769DBC528C0E6B159A83CFB3 /* UILabel+BAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+BAnimation.m"; path = "BHUD/UILabel+BAnimation.m"; sourceTree = "<group>"; };
+		B07788B98422370EC72C6131E7C8576C /* BCircleLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BCircleLoadingView.m; sourceTree = "<group>"; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B8CFA181192BB189FDDA48A108528709 /* Pods-BHudDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BHudDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		C6017918D730BB1821AC6C17D72CBC9B /* BCircleLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BCircleLoadingView.h; sourceTree = "<group>"; };
+		C6E61A5CFD9E23226339B6A85AEE0809 /* UILabel+BAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+BAnimation.h"; path = "BHUD/UILabel+BAnimation.h"; sourceTree = "<group>"; };
+		CA4010664CA851245C87710A27816403 /* Pods-BHudDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BHudDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CC1A1D512E265609CED4D91173A246F3 /* BFchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BFchView.m; sourceTree = "<group>"; };
+		CC269FFAFCF2917A318E26AE2498E4DE /* BHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BHUD-prefix.pch"; sourceTree = "<group>"; };
+		EE41538344C30C8389516AF8663C4038 /* ResourceBundle-BHUDImagesBundle-BHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BHUDImagesBundle-BHUD-Info.plist"; sourceTree = "<group>"; };
+		F7AF9C6C4A0E71C658DCA0DBF5CBCC7A /* Pods-BHudDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BHudDemo-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D46DF2E2E84197558EFAA1C99BB6951 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B7DB9B56D2CB3B6A0BA45597527F106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF7770D4C10BCC59E59824458BCA6B6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E9FBE6E478D1384FB908300C69D3139 /* Pods-BHudDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2CFD9427B0642ECA8DDBFB144F424270 /* Pods-BHudDemo-acknowledgements.markdown */,
+				B8CFA181192BB189FDDA48A108528709 /* Pods-BHudDemo-acknowledgements.plist */,
+				F7AF9C6C4A0E71C658DCA0DBF5CBCC7A /* Pods-BHudDemo-dummy.m */,
+				2CD160C04DE72757FAF03BFCABAAD039 /* Pods-BHudDemo-resources.sh */,
+				CA4010664CA851245C87710A27816403 /* Pods-BHudDemo.debug.xcconfig */,
+				800882C4C097996C7CB4C7A0336DF89A /* Pods-BHudDemo.release.xcconfig */,
+			);
+			name = "Pods-BHudDemo";
+			path = "Target Support Files/Pods-BHudDemo";
+			sourceTree = "<group>";
+		};
+		5AED359A8517069D1DFB05D919F64DA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A27E0CB7CE47F2D8D0F943A51CD0218D /* BHUDImagesBundle.bundle */,
+				3BFEF8832F49D617079952CF6D588570 /* libBHUD.a */,
+				7400FC04BFED5FEAFE6338BE86554F79 /* libPods-BHudDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
+				B0E9E1F47B03C69551A52EFECD26C1E7 /* Development Pods */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				5AED359A8517069D1DFB05D919F64DA5 /* Products */,
+				BDB9AF8067CAD702E6067032200684BA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		ABD7EBFF737346D571379FCE3BEA2A99 /* HudIndicatorViewStyle */ = {
+			isa = PBXGroup;
+			children = (
+				C6017918D730BB1821AC6C17D72CBC9B /* BCircleLoadingView.h */,
+				B07788B98422370EC72C6131E7C8576C /* BCircleLoadingView.m */,
+				7EF12B5AAC3C1A3ECD4EBCFC6E9C2E95 /* BFchView.h */,
+				CC1A1D512E265609CED4D91173A246F3 /* BFchView.m */,
+				5858CBD82DE0A0188EEFD8D512E9C05B /* BJumpingBarView.h */,
+				18319BDAE2EC6F302C086956AF721232 /* BJumpingBarView.m */,
+				3071D2A227A60056C5C1F31CFA8B8F96 /* BLaunchBarView.h */,
+				893B5D20FDAF4B7CF1197855BE1B9502 /* BLaunchBarView.m */,
+			);
+			name = HudIndicatorViewStyle;
+			path = BHUD/HudIndicatorViewStyle;
+			sourceTree = "<group>";
+		};
+		B0E9E1F47B03C69551A52EFECD26C1E7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBDFB5A2847A9A115631FB29396380AE /* BHUD */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BDB9AF8067CAD702E6067032200684BA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E9FBE6E478D1384FB908300C69D3139 /* Pods-BHudDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DBDFB5A2847A9A115631FB29396380AE /* BHUD */ = {
+			isa = PBXGroup;
+			children = (
+				363EA0670F5E90162C35278DFB861DA5 /* BHudContentView.h */,
+				3AE84EFAB570C9DF1F4FA8F6B1252753 /* BHudContentView.m */,
+				A39BE4B95F6B93C17011E2DB3FF83F2C /* BHudView.h */,
+				A93DC10BE116D1D3E197408B5635455B /* BHudView.m */,
+				C6E61A5CFD9E23226339B6A85AEE0809 /* UILabel+BAnimation.h */,
+				AB435B41769DBC528C0E6B159A83CFB3 /* UILabel+BAnimation.m */,
+				ABD7EBFF737346D571379FCE3BEA2A99 /* HudIndicatorViewStyle */,
+				E19FF283DCC86A251D490B20DAC35B1B /* Pod */,
+				F3733DC5E12943FE6837B5F574C700B2 /* Resources */,
+				FF1BEDBB7A0E2EF3798A2D979E4CE633 /* Support Files */,
+			);
+			name = BHUD;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E19FF283DCC86A251D490B20DAC35B1B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				56D06D3A75EA3874FB8E057D51F60458 /* BHUD.podspec */,
+				A27D358E673570D9854F99EDC4FCD05B /* LICENSE */,
+				586F65749361B1C84650B08801BE34B9 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F3733DC5E12943FE6837B5F574C700B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				629037C81BAD894C494EBDA08FD7C959 /* img_network_error.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FF1BEDBB7A0E2EF3798A2D979E4CE633 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				346CB9C6DA6F734A8163F20C8E0F1F36 /* BHUD.xcconfig */,
+				03DB49AA3F40EDBCE269E90B4D4405F6 /* BHUD-dummy.m */,
+				CC269FFAFCF2917A318E26AE2498E4DE /* BHUD-prefix.pch */,
+				EE41538344C30C8389516AF8663C4038 /* ResourceBundle-BHUDImagesBundle-BHUD-Info.plist */,
+			);
+			name = "Support Files";
+			path = "BHudDemo/Pods/Target Support Files/BHUD";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		26B730076195A5B65DECB25734082952 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C86A8F48CC7075E673198DB2AC7D5012 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8868D6252E66CDFE84B8B22E6393E870 /* BCircleLoadingView.h in Headers */,
+				842626C86444BE0CC487CD296B60CFD9 /* BFchView.h in Headers */,
+				0515A7D31BB06E0FA17AEC83D1B1F6DD /* BHudContentView.h in Headers */,
+				B2DC32E3407E722092711B7D0535E98D /* BHudView.h in Headers */,
+				001103210AD9FEB8F8BBEDD7732EC3FA /* BJumpingBarView.h in Headers */,
+				DA1D626CC62EB09DE47D72842EB349A3 /* BLaunchBarView.h in Headers */,
+				B2F643DA07D4E101133B48D9A81579E7 /* UILabel+BAnimation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3654899049CC7D148DFAA3772FF39C4C /* BHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F9E1CFDC6AFD96AD25878C98304D988 /* Build configuration list for PBXNativeTarget "BHUD" */;
+			buildPhases = (
+				C86A8F48CC7075E673198DB2AC7D5012 /* Headers */,
+				7A751149586B7EF1A3E90AC8151C2D97 /* Sources */,
+				0D46DF2E2E84197558EFAA1C99BB6951 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				083683703C3AA317ABD3DBC84BDE8AC7 /* PBXTargetDependency */,
+			);
+			name = BHUD;
+			productName = BHUD;
+			productReference = 3BFEF8832F49D617079952CF6D588570 /* libBHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9B850EA1348C8FB95FD0AACE9E60536C /* Pods-BHudDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1653C50872212CDAA8E7734C3588543 /* Build configuration list for PBXNativeTarget "Pods-BHudDemo" */;
+			buildPhases = (
+				26B730076195A5B65DECB25734082952 /* Headers */,
+				68F91C97A20AC05EE4D26E01227BE255 /* Sources */,
+				DF7770D4C10BCC59E59824458BCA6B6F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68A8A5C8F286A409456AF3DCE92A7E6D /* PBXTargetDependency */,
+			);
+			name = "Pods-BHudDemo";
+			productName = "Pods-BHudDemo";
+			productReference = 7400FC04BFED5FEAFE6338BE86554F79 /* libPods-BHudDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D27F21C57723D4F1751C5F66E72D1F21 /* BHUD-BHUDImagesBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3E68F78416B20D690F09582AD15F555 /* Build configuration list for PBXNativeTarget "BHUD-BHUDImagesBundle" */;
+			buildPhases = (
+				FBC24B1C4B9F9753B52FB60469D8B0BA /* Sources */,
+				9B7DB9B56D2CB3B6A0BA45597527F106 /* Frameworks */,
+				074B1185791295A3592384B1AD5426E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BHUD-BHUDImagesBundle";
+			productName = "BHUD-BHUDImagesBundle";
+			productReference = A27E0CB7CE47F2D8D0F943A51CD0218D /* BHUDImagesBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5AED359A8517069D1DFB05D919F64DA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3654899049CC7D148DFAA3772FF39C4C /* BHUD */,
+				D27F21C57723D4F1751C5F66E72D1F21 /* BHUD-BHUDImagesBundle */,
+				9B850EA1348C8FB95FD0AACE9E60536C /* Pods-BHudDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		074B1185791295A3592384B1AD5426E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				679BDC94B3548E62F968C9FD16F23B33 /* img_network_error.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68F91C97A20AC05EE4D26E01227BE255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019069FACC213069755EB6EAAA394601 /* Pods-BHudDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A751149586B7EF1A3E90AC8151C2D97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6F37E217D28F518ED0C4DB70D245399 /* BCircleLoadingView.m in Sources */,
+				EF7115D86A30ACD428A4B86FEFBE022B /* BFchView.m in Sources */,
+				EB3F92B0A7D337F97AB688A078A60054 /* BHUD-dummy.m in Sources */,
+				7DFFD5A0E65F92D1ED1217BD8B7F105A /* BHudContentView.m in Sources */,
+				1696028B61091C7E7A66AC1ABAADC8F2 /* BHudView.m in Sources */,
+				7441E12F46A4DC0EC6EF2E515F0610C0 /* BJumpingBarView.m in Sources */,
+				119897FB9295EF6BBC7AB8615934A528 /* BLaunchBarView.m in Sources */,
+				0CD4ACFCA158EF88B0E0CE2E07A29E55 /* UILabel+BAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC24B1C4B9F9753B52FB60469D8B0BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		083683703C3AA317ABD3DBC84BDE8AC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BHUD-BHUDImagesBundle";
+			target = D27F21C57723D4F1751C5F66E72D1F21 /* BHUD-BHUDImagesBundle */;
+			targetProxy = 9EC7A113B408A06EE4E8DAE82F9C5141 /* PBXContainerItemProxy */;
+		};
+		68A8A5C8F286A409456AF3DCE92A7E6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BHUD;
+			target = 3654899049CC7D148DFAA3772FF39C4C /* BHUD */;
+			targetProxy = FCBCEAAC108B0AEED213FD65CFCA05FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01906B711AAE6443B571F87979F7B981 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		174FB56068311E372741B557CEB62B2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346CB9C6DA6F734A8163F20C8E0F1F36 /* BHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BHUD";
+				INFOPLIST_FILE = "Target Support Files/BHUD/ResourceBundle-BHUDImagesBundle-BHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = BHUDImagesBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3C4CCBAAB995BCA3EDB6A9254185BC04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346CB9C6DA6F734A8163F20C8E0F1F36 /* BHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/BHUD/BHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = BHUD;
+				PRODUCT_NAME = BHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		552611E08D4BAE350314139013E5665E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		953A3E863D6F7812CF0A03F1FB28B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346CB9C6DA6F734A8163F20C8E0F1F36 /* BHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BHUD";
+				INFOPLIST_FILE = "Target Support Files/BHUD/ResourceBundle-BHUDImagesBundle-BHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = BHUDImagesBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9D5C463163D5D129C76522613A37B087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800882C4C097996C7CB4C7A0336DF89A /* Pods-BHudDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3433EBBCC984FEAEFF1A312A7F04F8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA4010664CA851245C87710A27816403 /* Pods-BHudDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5901B2956EA7D7F2B027B8C058B4BB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346CB9C6DA6F734A8163F20C8E0F1F36 /* BHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/BHUD/BHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = BHUD;
+				PRODUCT_NAME = BHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552611E08D4BAE350314139013E5665E /* Debug */,
+				01906B711AAE6443B571F87979F7B981 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F9E1CFDC6AFD96AD25878C98304D988 /* Build configuration list for PBXNativeTarget "BHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C4CCBAAB995BCA3EDB6A9254185BC04 /* Debug */,
+				B5901B2956EA7D7F2B027B8C058B4BB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1653C50872212CDAA8E7734C3588543 /* Build configuration list for PBXNativeTarget "Pods-BHudDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3433EBBCC984FEAEFF1A312A7F04F8C /* Debug */,
+				9D5C463163D5D129C76522613A37B087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3E68F78416B20D690F09582AD15F555 /* Build configuration list for PBXNativeTarget "BHUD-BHUDImagesBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953A3E863D6F7812CF0A03F1FB28B10F /* Debug */,
+				174FB56068311E372741B557CEB62B2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

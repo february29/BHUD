@@ -7,7 +7,7 @@
 //
 
 #define BHUDBundle [NSBundle bundleForClass:[self class]]
-#define BHUDImagesSrc [BHUDBundle.resourcePath stringByAppendingString:@"BHUDImagesBundle.bundle"]
+#define BHUDImagesSrc [BHUDBundle.resourcePath stringByAppendingString:@"/BHUDImagesBundle.bundle"]
 #define BHUDImagesBundle [NSBundle bundleWithPath:BHUDImagesSrc]
 
 #import "BHudContentView.h"
@@ -47,8 +47,12 @@
         
         _faildImageView = [UIImageView new];
         
-        
-        _faildImageView.image = [UIImage imageNamed:@"img_network_error" inBundle:BHUDImagesBundle compatibleWithTraitCollection:nil];
+        if (@available(iOS 8.0, *)) {
+            _faildImageView.image = [UIImage imageNamed:@"img_network_error" inBundle:BHUDImagesBundle compatibleWithTraitCollection:nil];
+        } else {
+            // Fallback on earlier versions
+            _faildImageView.image = [UIImage imageWithContentsOfFile:[BHUDImagesBundle pathForResource:@"img_network_error" ofType:@"png"]];
+        }
         [self addSubview:_faildImageView];
         
         
