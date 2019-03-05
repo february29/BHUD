@@ -60,17 +60,6 @@ typedef void(^BHUDFailBtnClickBlock)(void);
 
 
 /**
- 显示一个加载框
-
- @param supperView 所在view
- @param indicatorViewStyle 加载框样式
- @param hudType 加载框类型
- @param indicatorProportion 中心所在supperView的位置
- @param indicatorViewColor 旋转加载框颜色 设置旋转加载框时有效
- */
-+(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion circleHudindicatorViewColor:(UIColor *_Nullable)indicatorViewColor;
-
-/**
  显示一个旋转的加载框 底部有正在加载文字
 
  @param supperView 所在view
@@ -105,6 +94,19 @@ typedef void(^BHUDFailBtnClickBlock)(void);
  */
 +(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(BHUDFailBtnClickBlock _Nullable )clickBlock;
 
+
+/**
+ 显示加载框
+
+ @param supperView 所在view
+ @param indicatorViewStyle 加载框样式
+ @param hudType 加载框类型
+ @param indicatorProportion 中心所在supperView的位置
+ @param indicatorViewColor 加载框颜色 BHudCircleLoadingIndicatorView时有效
+ @param customHudView 自定义加载框 BHudCustomView时有效
+ @param failBtnClickBlock 重新加载回掉 BErrorHud时有效
+ */
++(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion circleHudindicatorViewColor:(UIColor *_Nullable)indicatorViewColor customHudView:(UIView *_Nullable)customHudView failBtnClickBlock:(BHUDFailBtnClickBlock _Nullable )failBtnClickBlock;
 
 /**
  隐藏所在view中所有hud
