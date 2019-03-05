@@ -1,5 +1,5 @@
 PODS:
-  - BHUD (1.0.2)
+  - BHUD (1.0.3)
 
 DEPENDENCIES:
   - BHUD (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BHUD: f34585798c9343d0c8825615de6bdfebd4ccf4b1
+  BHUD: d8ec294a15fcd620b0915c4f88dc1b34cd28ea71
 
 PODFILE CHECKSUM: 8e05de4b8e13709aa063b86cc1b760612b6a77f8
 

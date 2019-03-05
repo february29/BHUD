@@ -33,42 +33,87 @@
     
 }
 
-
-
 +(void)showIndicatorInView:(UIView *_Nullable)supperView{
     
     [self showIndicatorInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView];
 }
 
-
 +(void)showHudInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
-
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
-    contentView.indicatorViewStyle = indicatorViewStyle;
-    contentView.hudType = BLoadingAndIndicatorHud;
     
-    [supperView addSubview:contentView];
+    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:BLoadingAndIndicatorHud];
+    
     
 }
 
 +(void)showIndicatorInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
-  
+    
+    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:BIndicatorHud];
+}
+
+
+
++(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType{
+    
+    
+    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:0.5];
+    
+}
+
+
++(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion{
+    
+    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:indicatorProportion circleHudindicatorViewColor:nil];
+    
+}
+
++(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion circleHudindicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
     BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
     contentView.indicatorViewStyle = indicatorViewStyle;
-    contentView.hudType = BIndicatorHud;
+    contentView.circleIndicatorViewColor = indicatorViewColor;
+    contentView.hudType = hudType;
+    contentView.indicatorProportion = indicatorProportion;
     
     
     [supperView addSubview:contentView];
 }
 
 
++(void)showCircleHudInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
+    
+    
+    [self showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BLoadingAndIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:indicatorViewColor];
+}
 
-+(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(LuosFailBtnClickBlock _Nullable )clickBlock{
++(void)showCircleIndicatorInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
+    
+    [self showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:indicatorViewColor];
+}
+
+
++(void)showCustomHudView:(UIView *_Nullable)view InView:(UIView *_Nullable)supperView{
+    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
+    contentView.indicatorViewStyle = BHudCustomView;
+    contentView.customView = view;
+    contentView.hudType = BIndicatorHud;
+    
+    
+    [supperView addSubview:contentView];
+    
+    
+    
+}
+
+
+
+
++(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(BHUDFailBtnClickBlock _Nullable )clickBlock{
     
     [self hideHudInView:supperView];
     
+    
     BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
     [contentView setBackgroundColor:[UIColor whiteColor]];
+    contentView.indicatorProportion = 0.5;
     contentView.hudType = BErrorHud;
     contentView.alpha = 0;
     contentView.faildBtnBlock = clickBlock;
@@ -96,38 +141,6 @@
     
 }
 
-+(void)showCircleHudInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
-    contentView.indicatorViewStyle = BHudCircleLoadingIndicatorView;
-    contentView.circleIndicatorViewColor = indicatorViewColor;
-    contentView.hudType = BLoadingAndIndicatorHud;
-    
-    
-    [supperView addSubview:contentView];
-}
-
-+(void)showCircleIndicatorInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
-    contentView.indicatorViewStyle = BHudCircleLoadingIndicatorView;
-    contentView.circleIndicatorViewColor = indicatorViewColor;
-    contentView.hudType = BIndicatorHud;
-    
-    
-    [supperView addSubview:contentView];
-}
-
-
-+(void)showCustomHudView:(UIView *_Nullable)view InView:(UIView *_Nullable)supperView{
-    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
-    contentView.indicatorViewStyle = BHudCustomView;
-    contentView.customView = view;
-    contentView.hudType = BIndicatorHud;
-    
-    
-    [supperView addSubview:contentView];
-    
-    
-}
 
 
 @end

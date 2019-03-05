@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+//加载框类型
 typedef  NS_ENUM(NSInteger,BHudContentViewType){
-    BLoadingAndIndicatorHud,
-    BIndicatorHud,
-    BErrorHud,
+    BLoadingAndIndicatorHud,//加载框+文字
+    BIndicatorHud,//加载框
+    BErrorHud,//错误
 };
 
+
+//加载框样式
 typedef  NS_ENUM(NSInteger,BHudIndicatorViewStyle){
     BHudCircleLoadingIndicatorView,
     BHudJumpBarIndicatorView,
@@ -25,7 +28,7 @@ typedef  NS_ENUM(NSInteger,BHudIndicatorViewStyle){
 
 
 
-typedef void(^BContentViewFailBtnClickBlock)();
+typedef void(^BContentViewFailBtnClickBlock)(void);
 
 @interface BHudContentView : UIView
 
@@ -50,7 +53,13 @@ typedef void(^BContentViewFailBtnClickBlock)();
 
 
 /**
- 设置circleIndicatorViewColor的样式，
+ indicator 在父视图中距离父视图上边距比例。默认0.5
+ */
+@property (nonatomic,assign) float indicatorProportion;
+
+
+/**
+ 旋转加载框颜色，BHudCircleLoadingIndicatorView有效
  */
 @property (nonatomic,strong) UIColor * _Nullable circleIndicatorViewColor;
 
@@ -61,22 +70,28 @@ typedef void(^BContentViewFailBtnClickBlock)();
 @property (nonatomic,strong) UIView * _Nonnull customView;
 
 
+/**
+ 加载错误后 重新加载按钮点击回掉
+ */
+@property (nonatomic,copy)  BContentViewFailBtnClickBlock _Nullable faildBtnBlock;
+
+
 //- (instancetype _Nonnull )initWithIndicatorViewStyle:(BHudIndicatorViewStyle) indicatorViewStyle;
 
 
 //======================================私有变量尽量不要修改========================================//
 
-@property (nonatomic,strong) UIView *smailContentView;
-//加载
+//@property (nonatomic,strong) UIView *smailContentView;
+//加载文字lable
 @property (nonatomic, strong,readonly) UILabel  * _Nullable label;
 
 @property (nonatomic, strong,readonly) UIView  * _Nullable indicatorView;
 
-// 失败
+// 失败图片
 @property (nonatomic,strong,readonly) UIImageView * _Nullable faildImageView;
 
 @property (nonatomic, strong,readonly) UIButton  * _Nullable faildBtn;
 
-@property (nonatomic,copy)  BContentViewFailBtnClickBlock _Nullable faildBtnBlock;
+
 
 @end

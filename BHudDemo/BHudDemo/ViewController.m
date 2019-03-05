@@ -139,7 +139,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             //耗时任务
             
-            [NSThread sleepForTimeInterval:5.0];
+            [NSThread sleepForTimeInterval:3.0];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 //更新UI

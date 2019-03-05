@@ -33,6 +33,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+         _indicatorProportion = 0.5;
 //        [self setIndicatorViewStyle:BHudCircleLoadingIndicatorView];
         
         _label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0,self.frame.size.width, 30)];
@@ -73,37 +74,15 @@
 
 
 
-//- (instancetype)initWithIndicatorViewStyle:(BHudIndicatorViewStyle) indicatorViewStyle
-//{
-//    self = [super init];
-//    if (self) {
-//    
-//        
-//        _indicatorViewStyle = indicatorViewStyle;
-//        [self setUpView];
-//
-//        
-//        
-//        
-//        
-//    }
-//    return self;
-//}
-
-
-
-
-
-
 -(void)layoutSubviews{
     
     
-    self.indicatorView.frame = CGRectMake(self.frame.size.width*0.5-25, self.frame.size.height*0.5-50, 50, 50);
-    self.label.frame = CGRectMake(0, self.frame.size.height*0.5,self.frame.size.width, 30);
+    self.indicatorView.frame = CGRectMake(self.frame.size.width*0.5-25, self.frame.size.height*_indicatorProportion-50, 50, 50);
+    self.label.frame = CGRectMake(0, self.frame.size.height*_indicatorProportion,self.frame.size.width, 30);
     
     
-    self.faildImageView.frame  = CGRectMake(self.frame.size.width*0.5-25, self.frame.size.height*0.5-60, 50, 50);
-    self.faildBtn.frame = CGRectMake((self.frame.size.width-100)/2, self.frame.size.height*0.5,100, 25);
+    self.faildImageView.frame  = CGRectMake(self.frame.size.width*0.5-25, self.frame.size.height*_indicatorProportion-60, 50, 50);
+    self.faildBtn.frame = CGRectMake((self.frame.size.width-100)/2, self.frame.size.height*_indicatorProportion,100, 25);
     
     
 }
@@ -121,12 +100,12 @@
         [_indicatorView removeFromSuperview];
     }
     switch (indicatorViewStyle) {
-        case BHudCustomView:
+            case BHudCustomView:
         {
             return;
         }
             
-        case BHudCircleLoadingIndicatorView:
+            case BHudCircleLoadingIndicatorView:
         {
             _indicatorView = [BCircleLoadingView new];
             if (_circleIndicatorViewColor) {
@@ -135,20 +114,20 @@
             [self addSubview:_indicatorView];
             break;
         }
-        case BHudJumpBarIndicatorView:
+            case BHudJumpBarIndicatorView:
         {
             _indicatorView = [BJumpingBarView new];
             [self addSubview:_indicatorView];
             break;
         }
             
-        case BHudLaunchBarIndicatorView:
+            case BHudLaunchBarIndicatorView:
         {
             _indicatorView = [BLaunchBarView new];
             [self addSubview:_indicatorView];
             break;
         }
-        case BHudFchIndicatorView:
+            case BHudFchIndicatorView:
         {
             _indicatorView = [BFchView new];
             [self addSubview:_indicatorView];
@@ -159,9 +138,13 @@
         {
             
             _indicatorView = [BCircleLoadingView new];
+            if (_circleIndicatorViewColor) {
+                ((BCircleLoadingView *)_indicatorView).bHUDForegroundColor = _circleIndicatorViewColor;
+            }
             [self addSubview:_indicatorView];
             break;
         }
+            
             
     }
     
