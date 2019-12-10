@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008E1D20239F449F00AF5DD4 /* BHUD.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 008E1D1F239F449F00AF5DD4 /* BHUD.podspec */; };
+		008E1D22239F44A900AF5DD4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 008E1D21239F44A900AF5DD4 /* README.md */; };
 		210B54D61F70B27D005547B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54D51F70B27D005547B9 /* main.m */; };
 		210B54D91F70B27D005547B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54D81F70B27D005547B9 /* AppDelegate.m */; };
 		210B54DC1F70B27D005547B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210B54DB1F70B27D005547B9 /* ViewController.m */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		008E1D1F239F449F00AF5DD4 /* BHUD.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BHUD.podspec; path = ../BHUD.podspec; sourceTree = "<group>"; };
+		008E1D21239F44A900AF5DD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		210B54D11F70B27D005547B9 /* BHudDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BHudDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		210B54D51F70B27D005547B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		210B54D71F70B27D005547B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		210B54C81F70B27D005547B9 = {
 			isa = PBXGroup;
 			children = (
+				008E1D21239F44A900AF5DD4 /* README.md */,
+				008E1D1F239F449F00AF5DD4 /* BHUD.podspec */,
 				210B54D31F70B27D005547B9 /* BHudDemo */,
 				210B54D21F70B27D005547B9 /* Products */,
 				784545EFCB6B3DA12C42426C /* Pods */,
@@ -145,6 +151,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -165,7 +172,9 @@
 			files = (
 				210B54E41F70B27D005547B9 /* LaunchScreen.storyboard in Resources */,
 				210B54E11F70B27D005547B9 /* Assets.xcassets in Resources */,
+				008E1D22239F44A900AF5DD4 /* README.md in Resources */,
 				210B54DF1F70B27D005547B9 /* Main.storyboard in Resources */,
+				008E1D20239F449F00AF5DD4 /* BHUD.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

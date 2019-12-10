@@ -52,22 +52,22 @@
 		346CB9C6DA6F734A8163F20C8E0F1F36 /* BHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BHUD.xcconfig; sourceTree = "<group>"; };
 		363EA0670F5E90162C35278DFB861DA5 /* BHudContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BHudContentView.h; path = BHUD/BHudContentView.h; sourceTree = "<group>"; };
 		3AE84EFAB570C9DF1F4FA8F6B1252753 /* BHudContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BHudContentView.m; path = BHUD/BHudContentView.m; sourceTree = "<group>"; };
-		3BFEF8832F49D617079952CF6D588570 /* libBHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBHUD.a; path = libBHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		56D06D3A75EA3874FB8E057D51F60458 /* BHUD.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BHUD.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3BFEF8832F49D617079952CF6D588570 /* libBHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D06D3A75EA3874FB8E057D51F60458 /* BHUD.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BHUD.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		5858CBD82DE0A0188EEFD8D512E9C05B /* BJumpingBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BJumpingBarView.h; sourceTree = "<group>"; };
-		586F65749361B1C84650B08801BE34B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		586F65749361B1C84650B08801BE34B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		629037C81BAD894C494EBDA08FD7C959 /* img_network_error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = img_network_error.png; path = BHUD/images/img_network_error.png; sourceTree = "<group>"; };
-		7400FC04BFED5FEAFE6338BE86554F79 /* libPods-BHudDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BHudDemo.a"; path = "libPods-BHudDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7400FC04BFED5FEAFE6338BE86554F79 /* libPods-BHudDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BHudDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF12B5AAC3C1A3ECD4EBCFC6E9C2E95 /* BFchView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BFchView.h; sourceTree = "<group>"; };
 		800882C4C097996C7CB4C7A0336DF89A /* Pods-BHudDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BHudDemo.release.xcconfig"; sourceTree = "<group>"; };
 		893B5D20FDAF4B7CF1197855BE1B9502 /* BLaunchBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BLaunchBarView.m; sourceTree = "<group>"; };
-		A27D358E673570D9854F99EDC4FCD05B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		A27E0CB7CE47F2D8D0F943A51CD0218D /* BHUDImagesBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BHUDImagesBundle.bundle; path = "BHUD-BHUDImagesBundle.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A27D358E673570D9854F99EDC4FCD05B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A27E0CB7CE47F2D8D0F943A51CD0218D /* BHUDImagesBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BHUDImagesBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39BE4B95F6B93C17011E2DB3FF83F2C /* BHudView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BHudView.h; path = BHUD/BHudView.h; sourceTree = "<group>"; };
 		A93DC10BE116D1D3E197408B5635455B /* BHudView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BHudView.m; path = BHUD/BHudView.m; sourceTree = "<group>"; };
 		AB435B41769DBC528C0E6B159A83CFB3 /* UILabel+BAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+BAnimation.m"; path = "BHUD/UILabel+BAnimation.m"; sourceTree = "<group>"; };
 		B07788B98422370EC72C6131E7C8576C /* BCircleLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BCircleLoadingView.m; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B8CFA181192BB189FDDA48A108528709 /* Pods-BHudDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BHudDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		C6017918D730BB1821AC6C17D72CBC9B /* BCircleLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BCircleLoadingView.h; sourceTree = "<group>"; };
 		C6E61A5CFD9E23226339B6A85AEE0809 /* UILabel+BAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+BAnimation.h"; path = "BHUD/UILabel+BAnimation.h"; sourceTree = "<group>"; };
@@ -319,6 +319,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -446,8 +447,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
