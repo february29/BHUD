@@ -11,7 +11,6 @@
 #import <objc/runtime.h>
 
 
-static char b_layerkey;
 
 @implementation UILabel (BAnimation)
 

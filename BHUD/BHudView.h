@@ -11,7 +11,7 @@
 
 #define LuosAnimationTime 0.25f
 
-typedef void(^BHUDFailBtnClickBlock)(void);
+
 
 @interface BHudView : NSObject
 
@@ -92,7 +92,7 @@ typedef void(^BHUDFailBtnClickBlock)(void);
  @param supperView 所在view
  @param clickBlock 点击重新加载回调
  */
-+(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(BHUDFailBtnClickBlock _Nullable )clickBlock;
++(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(void(^_Nullable)(void) )clickBlock;
 
 
 /**
@@ -106,7 +106,7 @@ typedef void(^BHUDFailBtnClickBlock)(void);
  @param customHudView 自定义加载框 BHudCustomView时有效
  @param failBtnClickBlock 重新加载回掉 BErrorHud时有效
  */
-+(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion circleHudindicatorViewColor:(UIColor *_Nullable)indicatorViewColor customHudView:(UIView *_Nullable)customHudView failBtnClickBlock:(BHUDFailBtnClickBlock _Nullable )failBtnClickBlock;
++(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion circleHudindicatorViewColor:(UIColor *_Nullable)indicatorViewColor customHudView:(UIView *_Nullable)customHudView failBtnClickBlock:(void(^_Nullable)(void))failBtnClickBlock;
 
 /**
  隐藏所在view中所有hud
