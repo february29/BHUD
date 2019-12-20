@@ -30,25 +30,25 @@
 
 -(void)showHudInView:(UIView *_Nullable)supperView{
     
-     [self showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BLoadingAndIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+     [self showInView:supperView indicatorViewStyle:self.config.indicatorViewStyle hudType:self.config.hudType indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
 
     
 }
 
 -(void)showIndicatorInView:(UIView *_Nullable)supperView{
     
-     [self showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+     [self showInView:supperView indicatorViewStyle:self.config.indicatorViewStyle hudType:BIndicatorHud indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
 }
 
 -(void)showHudInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
     
-    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:BLoadingAndIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:self.config.hudType indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
     
 }
 
 -(void)showIndicatorInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
     
-   [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+   [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:BIndicatorHud indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
 }
 
 
@@ -56,14 +56,14 @@
 -(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType{
     
     
-    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
     
 }
 
 
 -(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion{
     
-    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:indicatorProportion circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+    [self showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
     
 }
 
@@ -72,14 +72,14 @@
 
 -(void)showCircleHudInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
     
-    [self showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BLoadingAndIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:indicatorViewColor customHudView:nil failBtnClickBlock:nil];
+    [self showInView:supperView indicatorViewStyle:self.config.indicatorViewStyle hudType:self.config.hudType indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:indicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
     
     
 }
 
 -(void)showCircleIndicatorInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
     
-    [self showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:indicatorViewColor customHudView:nil failBtnClickBlock:nil];
+    [self showInView:supperView indicatorViewStyle:self.config.indicatorViewStyle hudType:self.config.hudType indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:indicatorViewColor customHudView:self.config.customView failBtnClickBlock:nil];
 }
 
 
@@ -88,15 +88,7 @@
     
     
     
-    [self showInView:supperView indicatorViewStyle:BHudCustomView hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:view failBtnClickBlock:nil];
-    
-//    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
-//    contentView.indicatorViewStyle = BHudCustomView;
-//    contentView.customView = view;
-//    contentView.hudType = BIndicatorHud;
-//
-//
-//    [supperView addSubview:contentView];
+    [self showInView:supperView indicatorViewStyle:BHudCustomView hudType:BIndicatorHud indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:view failBtnClickBlock:nil];
     
     
     
@@ -110,7 +102,7 @@
     [self hideHudInView:supperView];
     
     
-    [self showInView:supperView indicatorViewStyle:BHudCustomView hudType:BErrorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:clickBlock];
+    [self showInView:supperView indicatorViewStyle:BHudCustomView hudType:BErrorHud indicatorProportion:self.config.indicatorProportion circleHudindicatorViewColor:self.config.circleIndicatorViewColor customHudView:nil failBtnClickBlock:clickBlock];
     
 
 }

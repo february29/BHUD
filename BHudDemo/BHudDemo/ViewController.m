@@ -21,6 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //全局设置1
+//    BHudViewConfiguration *config = [BHudViewConfiguration defaultConfiguration];
+//    config.circleIndicatorViewColor = [UIColor purpleColor];
+//    [BHudViewManager sharedInstance].config = config;
+    
+    
+//    UIView *custom =  [[UIView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
+//       custom.backgroundColor = [UIColor yellowColor];
+//       [custom stopAnimating];
+//       custom.color = [UIColor purpleColor];
+//
+//    //全局设置2
+//    BHudViewConfiguration *config2 = [BHudViewConfiguration defaultConfiguration];
+//    config2.customView = custom;
+//    config2.indicatorViewStyle = BHudCustomView;
+//    config2.hudType = BIndicatorHud;
+//    [BHudViewManager sharedInstance].config = config2;
+    
+    
     _dataArray = @[@"cirlcle",@"jumbingbar",@"luunchbar",@"fch",@"failth",@"custom",@"customColorCirlcle"];
     
     

@@ -96,7 +96,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param supperView 所在view
  @param clickBlock 点击重新加载回调
  */
--(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(void(^_Nullable)(void))clickBlock;
+-(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(void(^_Nullable)(void))clickBlock BHudDeprecated("使用较少，即将舍弃");
 
 
 /**

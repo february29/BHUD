@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BHudContentView.h"
+#import "BHudViewManager.h"
 
 #define LuosAnimationTime 0.25f
 
@@ -92,7 +92,7 @@
  @param supperView 所在view
  @param clickBlock 点击重新加载回调
  */
-+(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(void(^_Nullable)(void) )clickBlock;
++(void)showErrorInView:(UIView *_Nullable)supperView clickBlock:(void(^_Nullable)(void) )clickBlock BHudDeprecated("使用较少，即将舍弃");
 
 
 /**

@@ -7,8 +7,7 @@
 //
 
 #import "BHudView.h"
-#import "BHudViewManager.h"
-#import "BHudContentView.h"
+
 
 @interface BHudView(){
 
@@ -30,41 +29,35 @@
 +(void)showHudInView:(UIView *_Nullable)supperView{
     
    
+    [[BHudViewManager sharedInstance] showHudInView:supperView];
     
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BLoadingAndIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+    
 
     
 }
 
 +(void)showIndicatorInView:(UIView *_Nullable)supperView{
     
-     [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+     [[BHudViewManager sharedInstance]showIndicatorInView:supperView];
 }
 
 +(void)showHudInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
     
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:BLoadingAndIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+    [[BHudViewManager sharedInstance] showHudInView:supperView indicatorViewStyle:indicatorViewStyle];
     
 }
 
 +(void)showIndicatorInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle{
     
-   [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+   [[BHudViewManager sharedInstance] showIndicatorInView:supperView indicatorViewStyle:indicatorViewStyle];
 }
 
 
-
-+(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType{
-    
-    
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
-    
-}
 
 
 +(void)showInView:(UIView *_Nullable)supperView indicatorViewStyle:(BHudIndicatorViewStyle )indicatorViewStyle hudType:(BHudContentViewType)hudType indicatorProportion:(float)indicatorProportion{
     
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:indicatorProportion circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:nil];
+    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:indicatorViewStyle hudType:hudType indicatorProportion:indicatorProportion];
     
 }
 
@@ -73,14 +66,14 @@
 
 +(void)showCircleHudInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
     
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BLoadingAndIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:indicatorViewColor customHudView:nil failBtnClickBlock:nil];
+    [[BHudViewManager sharedInstance] showCircleHudInView:supperView indicatorViewColor:indicatorViewColor];
     
     
 }
 
 +(void)showCircleIndicatorInView:(UIView *_Nullable)supperView indicatorViewColor:(UIColor *_Nullable)indicatorViewColor{
     
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:BHudCircleLoadingIndicatorView hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:indicatorViewColor customHudView:nil failBtnClickBlock:nil];
+    [[BHudViewManager sharedInstance] showCircleIndicatorInView:supperView indicatorViewColor:indicatorViewColor];
 }
 
 
@@ -89,15 +82,8 @@
     
     
     
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:BHudCustomView hudType:BIndicatorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:view failBtnClickBlock:nil];
-    
-//    BHudContentView *contentView = [[BHudContentView alloc]initWithFrame:supperView.bounds];
-//    contentView.indicatorViewStyle = BHudCustomView;
-//    contentView.customView = view;
-//    contentView.hudType = BIndicatorHud;
-//
-//
-//    [supperView addSubview:contentView];
+    [[BHudViewManager sharedInstance] showCustomHudView:view InView:supperView];
+
     
     
     
@@ -111,7 +97,7 @@
     [[BHudViewManager sharedInstance] hideHudInView:supperView];
     
     
-    [[BHudViewManager sharedInstance] showInView:supperView indicatorViewStyle:BHudCustomView hudType:BErrorHud indicatorProportion:0.5 circleHudindicatorViewColor:nil customHudView:nil failBtnClickBlock:clickBlock];
+    [[BHudViewManager sharedInstance] showErrorInView:supperView clickBlock:clickBlock];
     
 
 }

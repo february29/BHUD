@@ -7,28 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BHudViewConfiguration.h"
 
-//加载框类型
-typedef  NS_ENUM(NSInteger,BHudContentViewType){
-    BLoadingAndIndicatorHud,//加载框+文字
-    BIndicatorHud,//加载框
-    BErrorHud,//错误
-};
-
-
-//加载框样式
-typedef  NS_ENUM(NSInteger,BHudIndicatorViewStyle){
-    BHudCircleLoadingIndicatorView,
-    BHudJumpBarIndicatorView,
-    BHudLaunchBarIndicatorView,
-    BHudFchIndicatorView,
-    BHudCustomView,
-    
-};
-
-
-
-typedef void(^BContentViewFailBtnClickBlock)(void);
 
 @interface BHudContentView : UIView
 
